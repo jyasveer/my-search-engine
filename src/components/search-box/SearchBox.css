@@ -1,8 +1,3 @@
-.search-box {
-  display: flex;
-  flex-direction: column;
-}
-
 .input-area {
   display: flex;
   align-items: center;
@@ -29,9 +24,4 @@
 
 .input-area > input:focus {
   outline: 0;
-}
-
-.button-area {
-  display: flex;
-  justify-content: center;
 }

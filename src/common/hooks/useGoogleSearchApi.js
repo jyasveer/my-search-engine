@@ -24,7 +24,7 @@ const useGoogleSearchApi = (term) => {
         }).catch(error => {
             console.log(error);
         });
-    }, [term])
+    }, [term]);
 
     return {
         data

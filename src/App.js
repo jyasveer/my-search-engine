@@ -12,17 +12,21 @@ function App() {
   };
 
   const [appState, setAppState] = useState({
-    searchTerm: '',
-    updateSearchTerm: () => { }
+    searchTerm: ''
   });
 
-  useEffect(() => {
-    setAppState({ ...appState, updateSearchTerm });
-  }, []);
+  // useEffect(() => {
+  //   setAppState({ ...appState, updateSearchTerm });
+  // }, []);
+
+  const contextObject = {
+    searchTerm: appState.searchTerm,
+    updateSearchTerm
+  }
 
   return (
     <>
-      <StateProvider value={appState}>
+      <StateProvider value={contextObject}>
         <Header />
         <Router>
           <Routes>
