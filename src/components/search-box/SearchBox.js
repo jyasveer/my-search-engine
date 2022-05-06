@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from '@material-ui/core';
 import './SearchBox.css';
 
-const SearchBox = () => {
+const SearchBox = ({ onClickHandler }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const searchButtonHandler = (event) => {
     event.preventDefault();
-
+    onClickHandler(searchTerm);
     setSearchTerm('');
+    navigate('./search');
   };
 
   const inputChangeHandler = (event) => {
