@@ -1,0 +1,17 @@
+.search-options {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-options .search-option {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: gray;
+}
+
+.search-options .search-option a {
+  cursor: pointer;
+}
+

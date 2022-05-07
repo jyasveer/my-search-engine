@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from './components';
@@ -14,10 +14,6 @@ function App() {
   const [appState, setAppState] = useState({
     searchTerm: ''
   });
-
-  // useEffect(() => {
-  //   setAppState({ ...appState, updateSearchTerm });
-  // }, []);
 
   const contextObject = {
     searchTerm: appState.searchTerm,

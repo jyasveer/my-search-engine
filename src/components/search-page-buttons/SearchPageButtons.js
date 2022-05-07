@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from '@material-ui/core';
+import { Link } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import PinDrop from '@material-ui/icons/PinDrop';
 import ImageIcon from '@material-ui/icons/Image';
@@ -8,27 +8,27 @@ import Videos from '@material-ui/icons/Videocam';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import './SearchPageButtons.css';
 
-const SearchPageButtons = ({ searchButtonHandler }) => {
+const SearchPageButtons = () => {
   return (
-    <div className="search-button-area">
-      <Button type="submit" onClick={searchButtonHandler}>
-        <SearchIcon /> All
-      </Button>
-      <Button>
-        <PinDrop /> Maps
-      </Button>
-      <Button>
-        <Notes /> News
-      </Button>
-      <Button>
-        <ImageIcon /> Images
-      </Button>
-      <Button>
-        <Videos /> Videos
-      </Button>
-      <Button>
-        <MoreVertIcon /> More
-      </Button>
+    <div className="search-options">
+      <div className='search-option'>
+        <SearchIcon /> <Link to='/all'>All</Link>
+      </div>
+      <div className='search-option'>
+        <PinDrop /> <Link to='/maps'>Maps</Link>
+      </div>
+      <div className='search-option'>
+        <Notes /> <Link to='/news'>News</Link>
+      </div>
+      <div className='search-option'>
+        <ImageIcon /> <Link to='/images'>Images</Link>
+      </div>
+      <div className='search-option'>
+        <Videos /> <Link to='/videos'>Videos</Link>
+      </div>
+      <div className='search-option'>
+        <MoreVertIcon /> <Link to='/more'>More</Link>
+      </div>
     </div>
   );
 };

@@ -1,11 +1,10 @@
 .search-page {
   display: flex;
-  flex-direction: column;
 }
 
-.search-page-top-section {
+.search-page-left-section {
   display: flex;
-  align-items: center;
+  padding-top: 20px;
 }
 
 .logo-img {
@@ -14,6 +13,51 @@
   object-fit: contain;
 }
 
+.search-page-right-section {
+  display: flex;
+  flex-direction: column;
+}
+
 .search-box-section {
   align-items: flex-start;
+}
+
+.search-box-section .input-area{
+    margin: 20px 0 0;
+    max-width: none;
+    width: 650px;
+}
+
+.search-box-section button {
+  display: none;
+}
+
+.search-results-section {
+  margin-top: 20px;
+  width: 700px;
+}
+
+.search-results-list {
+  margin-top: 10px;
+}
+
+.search-results-item {
+  border-bottom: 1px gray solid;
+  padding: 20px 0 10px;
+}
+
+.search-results-item-first-line {
+  display: flex;
+  align-items: flex-end;
+}
+
+.search-results-item-first-line img {
+  height: 40px;
+  width: 60px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.search-results-item-second-line h3 {
+  margin-top: 5px;
 }
